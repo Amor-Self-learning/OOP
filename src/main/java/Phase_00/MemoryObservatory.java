@@ -3,19 +3,22 @@
  *
  * 1. When you changed p2.x to 999, p1.x also became 999. Explain in one sentence
  *    why, using the words "stack", "heap", and "reference":
- *    [your answer]
+ *    p1 and p2 are just the references in stack that points to the same object in heap, so when we try to change
+ *    p2 we are actually updating object in heap.
  *
  * 2. How many stack frames existed at the deepest point of factorial(5)?
  *    (Count them in the Frames panel)
- *    [your answer]
+ *    5 stacks (increment one by one then decrement one by one) LIFO
  *
  * 3. After `p = new Point(20, 30)`, can your program ever access Point(5, 10) again?
  *    What does this mean for GC?
- *    [your answer]
+ *    No we can't access the object Point(5, 10) again because there is no reference of it in GCRoot. It
+ *    became a garbage and memory was collected by GC.
  *
  * 4. What error would you see if you called causeStackOverflow()?
  *    Which memory region is exhausted?
- *    [your answer]
+ *    Exception in thread "main" java.lang.StackOverflowError
+ *    Stack memory got exhausted.
  */
 package Phase_00;
 
@@ -91,6 +94,6 @@ public class MemoryObservatory {
         demonstrateGCEligibility();
 
         // Uncomment to observe StackOverflowError — run separately
-        // causeStackOverflow();
+       // causeStackOverflow();
     }
 }
