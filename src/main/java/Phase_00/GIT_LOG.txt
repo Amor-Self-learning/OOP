@@ -1,0 +1,8 @@
+aaed5d8 Complete stack trace navigator — traced 4-level call chain, fixed empty array access
+d05568d Complete NPE autopsy — diagnosed and fixed 3 null scenarios, debugger-traced each
+17b7f48 Complete stack/heap observatory — observed reference aliasing and stack frames in debugger
+5e2cd27 File for Heap and stack observation
+f78f600 Complete bytecode inspector drill — add/multiply/divide with javap analysis
+37a59b9 Create Calculator file for ByteCode inspection
+6904831 Add the Outline Generated and Ehnanced by Claude, ChatGPT and Gemini
+b9db28b Initial Commit: Create a gradle project
